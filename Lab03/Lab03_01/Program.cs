@@ -6,7 +6,7 @@ class Person
 {
     public void Greet()
     {
-        Console.WriteLine("Hello!");
+        Console.WriteLine("Hi!");
     }
 
     public void SetAge(int age)
@@ -36,24 +36,30 @@ class Professor : Person
     {
         Console.WriteLine("I'm explaining");
     }
+
+    public void ShowAge()
+    {
+        Console.WriteLine("My age is: {0} years old", this.Age);
+    }
 }
 
 class StudentProfessorTest
 {
     static void Main(string[] args)
     {
-        Person person = new Person();
-        person.Greet();
+        Person p = new Person();
+        p.Greet();
 
-        Student student = new Student();
-        student.SetAge(20);
-        student.Greet();
-        student.ShowAge();
+        Student s = new Student();
+        s.SetAge(30);
+        s.Greet();
+        s.ShowAge();
 
-        Professor professor = new Professor();
-        professor.SetAge(40);
-        professor.Greet();
-        professor.Explain();
+        Professor prof = new Professor();
+        prof.SetAge(40);
+        prof.Greet();
+        prof.ShowAge();
+        prof.Explain();
     }
 }
 
