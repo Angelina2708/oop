@@ -3,3 +3,13 @@ C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\obj\De
 C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\obj\Debug\net6.0\Lab03_03.AssemblyInfoInputs.cache
 C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\obj\Debug\net6.0\Lab03_03.AssemblyInfo.cs
 C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\obj\Debug\net6.0\Lab03_03.csproj.CoreCompileInputs.cache
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\bin\Debug\net6.0\Lab03_03.exe
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\bin\Debug\net6.0\Lab03_03.deps.json
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\bin\Debug\net6.0\Lab03_03.runtimeconfig.json
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\bin\Debug\net6.0\Lab03_03.dll
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\bin\Debug\net6.0\Lab03_03.pdb
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\obj\Debug\net6.0\Lab03_03.dll
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\obj\Debug\net6.0\refint\Lab03_03.dll
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\obj\Debug\net6.0\Lab03_03.pdb
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\obj\Debug\net6.0\Lab03_03.genruntimeconfig.cache
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab03\Lab03_03\obj\Debug\net6.0\ref\Lab03_03.dll

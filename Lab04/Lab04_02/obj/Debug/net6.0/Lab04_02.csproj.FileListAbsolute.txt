@@ -1,0 +1,5 @@
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab04\Lab04_02\obj\Debug\net6.0\Lab04_02.csproj.AssemblyReference.cache
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab04\Lab04_02\obj\Debug\net6.0\Lab04_02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab04\Lab04_02\obj\Debug\net6.0\Lab04_02.AssemblyInfoInputs.cache
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab04\Lab04_02\obj\Debug\net6.0\Lab04_02.AssemblyInfo.cs
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab04\Lab04_02\obj\Debug\net6.0\Lab04_02.csproj.CoreCompileInputs.cache

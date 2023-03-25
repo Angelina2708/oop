@@ -1,81 +1,83 @@
-﻿using System.IO;
-using System.Text;
-using System;
+﻿using System;
 
-class ProperFraction
+class Fraction
 {
-    public int GetNumerator()
+    public int Numerator { get; set; }
+    public int Denominator { get; set; }
+
+    public Fraction()
     {
-        return numerator;
-    }
-    public int GetDenominator()
-    {
-        return denominator;
+        Numerator = 0;
+        Denominator = 1;
     }
 
-    public ProperFraction()
+    public Fraction(int numerator, int denominator)
     {
-        GetNumerator = 0;
-        GetDenominator = 1;
+        Numerator = numerator;
+        Denominator = denominator;
     }
 
-    public ProperFraction(int num, int denom)
+    public double ToPercentage()
     {
-        GetNumerator = num;
-        GetDenominator = denom;
+        return (double)Numerator / Denominator * 100;
     }
 
-    public void ToPercentage()
+    public int SumOfDenominatorDigits()
     {
-        double percent = (double)GetNumerator / GetDenominator * 100;
-        Console.WriteLine("The fraction as a percentage is: {0}%", percent);
-    }
+        int sum = 0;
+        int value = Denominator;
 
-    public int SumDenominator()
-    {
-        return denominator;
+        while (value != 0)
+        {
+            sum += value % 10;
+            value /= 10;
+        }
+
+        return sum;
     }
 
     public override string ToString()
     {
-        return string.Format("{0}/{1}", GetNumerator, GetDenominator);
+        return $"{Numerator}/{Denominator}";
     }
 }
 
-class MixedFraction : ProperFraction
+class MixedFraction : Fraction
 {
-    private int wholePart;
+    public int WholePart { get; set; }
 
-    public MixedFraction(int whole, int num, int denom) : base(num, denom)
+    public MixedFraction() : base()
     {
-        wholePart = whole;
+        WholePart = 0;
     }
 
-    public void ToDecimal()
+    public MixedFraction(int wholePart, int numerator, int denominator) : base(numerator, denominator)
     {
-        double result = (double)wholePart + (double)GetNumerator / GetDenominator;
-        Console.WriteLine("The mixed fraction as a decimal is: {0}", result);
+        WholePart = wholePart;
+    }
+
+    public double ToDecimal()
+    {
+        return WholePart + (double)Numerator / Denominator;
     }
 
     public override string ToString()
     {
-        return string.Format("{0} {1}/{2}", wholePart, GetNumerator, GetDenominator);
+        return $"{WholePart} {base.ToString()}";
     }
 }
 
-class FractionTest
+class Program
 {
     static void Main(string[] args)
     {
-        ProperFraction f1 = new ProperFraction(3, 4);
-        f1.ToPercentage();
-        Console.WriteLine("The sum of denominators is: {0}", f1.SumDenominator());
-        Console.WriteLine("The fraction is: {0}", f1.ToString());
+        Fraction fraction = new Fraction(5, 7);
+        Console.WriteLine(fraction.ToString());
+        Console.WriteLine("Percentage: " + fraction.ToPercentage());
+        Console.WriteLine("Sum of denominator digits: " + fraction.SumOfDenominatorDigits());
 
-        MixedFraction f2 = new MixedFraction(2, 1, 4);
-        f2.ToDecimal();
-        Console.WriteLine("The mixed fraction is: {0}", f2.ToString());
-
-        Console.ReadLine();
+        MixedFraction mixedFraction = new MixedFraction(1, 2, 3);
+        Console.WriteLine(mixedFraction.ToString());
+        Console.WriteLine("Decimal: " + mixedFraction.ToDecimal());
     }
 }
