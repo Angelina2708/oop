@@ -98,72 +98,72 @@ class Tie : Clothing, IManClothes
 
     public void DressMan()
     {
-        Console.WriteLine("Одягаємо чоловіка в краватку розміру - {0}, кольору - {1} за ціною - {2}", size, color, price);
+        Console.WriteLine("Одягаємо чоловіка в краватку розміру - {0}, кольору - {1} за ціною - {2} грн.", size, color, price);
     }
 }
 
-    class Shop
+class Shop
+{
+    private string[] sizes = { "XXS", "XS", "S", "M", "L" };
+    private int[] euroSizes = { 32, 34, 36, 38, 40 };
+    public string GetSizeDescription(string size)
     {
-        private string[] sizes = { "XXS", "XS", "S", "M", "L" };
-        private int[] euroSizes = { 32, 34, 36, 38, 40 };
-        public string GetSizeDescription(string size)
+        if (size == "XXS")
         {
-            if (size == "XXS")
-            {
-                return "Дитячий розмір";
-            }
-            else
-            {
-                return "Дорослий розмір";
-            }
+            return "Дитячий розмір";
         }
-
-        public int GetEuroSize(string size)
+        else
         {
-            int index = Array.IndexOf(sizes, size);
-            return euroSizes[index];
-        }
-
-        public void DressMan(IManClothes[] clothes)
-        {
-            Console.OutputEncoding = UTF8Encoding.UTF8; // на всякий випадок
-            Console.WriteLine("Одягаємо чоловіка:");
-            foreach (var item in clothes)
-            {
-                item.DressMan();
-            }
-        }
-
-        public void DressWoman(IWomanClothes[] clothes)
-        {
-            Console.WriteLine("Одягаємо жінку:");
-            foreach (var item in clothes)
-            {
-                item.DressWoman();
-            }
+            return "Дорослий розмір";
         }
     }
 
-    class Program
+    public int GetEuroSize(string size)
     {
-        static void Main(string[] args)
+        int index = Array.IndexOf(sizes, size);
+        return euroSizes[index];
+    }
+
+    public void DressMan(IManClothes[] clothes)
+    {
+        Console.OutputEncoding = UTF8Encoding.UTF8; // на всякий випадок
+        Console.WriteLine("Одягаємо чоловіка:");
+        foreach (var item in clothes)
         {
-            Shop shop = new Shop();
-            Clothing[] clothes = new Clothing[]
-            {
+            item.DressMan();
+        }
+    }
+
+    public void DressWoman(IWomanClothes[] clothes)
+    {
+        Console.WriteLine("Одягаємо жінку:");
+        foreach (var item in clothes)
+        {
+            item.DressWoman();
+        }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Shop shop = new Shop();
+        Clothing[] clothes = new Clothing[]
+        {
             new TShirt("S", 100.0, "жовтий"),
             new Pants("M", 200.0, "чорний"),
             new Skirt("XS", 150.0, "синій"),
             new Tie("L", 50.0, "червоний")
-            };
-            IManClothes[] manClothes = Array.FindAll(clothes, item => item is IManClothes).Cast<IManClothes>().ToArray();
-            IWomanClothes[] womanClothes = Array.FindAll(clothes, item => item is IWomanClothes).Cast<IWomanClothes>().ToArray();
+        };
+        IManClothes[] manClothes = Array.FindAll(clothes, item => item is IManClothes).Cast<IManClothes>().ToArray();
+        IWomanClothes[] womanClothes = Array.FindAll(clothes, item => item is IWomanClothes).Cast<IWomanClothes>().ToArray();
 
-            shop.DressMan(manClothes);
-            Console.WriteLine();
-            shop.DressWoman(womanClothes);
+        shop.DressMan(manClothes);
+        Console.WriteLine();
+        shop.DressWoman(womanClothes);
 
-            Console.ReadLine();
-        }
+        Console.ReadLine();
     }
+}
 
