@@ -1,21 +1,21 @@
 ﻿// Опис інтерфейсу IFigure
 interface IFigure
 {
-    void PrintType();
-    void PrintArea();
-    double Length { get; }
-    double Width { get; }
-    void PrintDiagonal();
+    void PrintType(); // метод, що виводить на екран тип фігури
+    void PrintArea(); // метод, що виводить на екран площу фігури
+    double Length { get; } // властивість, що відповідає за перший лінійний розмір фігури 
+    double Width { get; } // властивість, що відповідає за другий лінійний розмір фігури
+    void PrintDiagonal(); // метод, що виводить на екран довжину діагоналі фігури
 }
 
-// Опис інтерфейсу IColoredFigure
+// Опис інтерфейсу IColoredFigure, який успадковує від інтерфейсу IFigure
 interface IColoredFigure : IFigure
 {
     string Color { get; }
     void PrintColor();
 }
 
-// Реалізація класу Rectangle, який імплементує інтерфейс IFigure
+// Реалізація класу Rectangle, який успадковує від інтерфейсу IFigure
 class Rectangle : IFigure
 {
     public double Length { get; set; }
@@ -43,7 +43,7 @@ class Rectangle : IFigure
     }
 }
 
-// Реалізація класу ColoredRectangle, який успадковує від класу Rectangle та імплементує інтерфейс IColoredFigure
+// Реалізація класу ColoredRectangle, який успадковує від класу Rectangle та успадковує від інтерфейсу IColoredFigure
 class ColoredRectangle : Rectangle, IColoredFigure
 {
     public string Color { get; set; }
@@ -64,13 +64,13 @@ class Program
     static void Main(string[] args)
     {
         // Створюємо екземпляри класів Rectangle та ColoredRectangle
-        Rectangle rect1 = new Rectangle(10, 5);
-        Rectangle rect2 = new Rectangle(7, 3);
-        Rectangle rect3 = new Rectangle(12, 6);
+        Rectangle rect1 = new Rectangle(15, 7);
+        Rectangle rect2 = new Rectangle(10, 8);
+        Rectangle rect3 = new Rectangle(16, 8);
 
-        ColoredRectangle colRect1 = new ColoredRectangle(8, 4, "red");
-        ColoredRectangle colRect2 = new ColoredRectangle(5, 2, "blue");
-        ColoredRectangle colRect3 = new ColoredRectangle(9, 3, "green");
+        ColoredRectangle colRect1 = new ColoredRectangle(10, 6, "red");
+        ColoredRectangle colRect2 = new ColoredRectangle(7,4, "blue");
+        ColoredRectangle colRect3 = new ColoredRectangle(11, 5, "green");
 
         // Формуємо масив з екземплярів класів
         IFigure[] figures = new IFigure[] { rect1, rect2, rect3, colRect1, colRect2, colRect3 };

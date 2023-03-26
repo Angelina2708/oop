@@ -62,9 +62,9 @@ class Program
     static void Main(string[] args)
     {
         Instrument[] instruments = new Instrument[] {
-            new Guitar(6),
-            new Drums("medium"),
-            new Trumpet(3.5)
+            new Guitar(7),
+            new Drums("largee"),
+            new Trumpet(5.7)
         };
 
         foreach (Instrument instrument in instruments)
