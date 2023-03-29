@@ -51,8 +51,9 @@ class StudentProfessorTest
         p.Greet();
 
         Student s = new Student();
-        s.SetAge(30);
+        s.SetAge(20);
         s.Greet();
+        s.Study();
         s.ShowAge();
 
         Professor prof = new Professor();

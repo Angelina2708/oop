@@ -63,7 +63,7 @@ class Program
     {
         Instrument[] instruments = new Instrument[] {
             new Guitar(7),
-            new Drums("largee"),
+            new Drums("large"),
             new Trumpet(5.7)
         };
 

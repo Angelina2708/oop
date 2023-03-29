@@ -40,9 +40,9 @@ class TwoEquationSystem : TSystemLinearEquation
 
         if (Math.Abs(det) < 1e-9)
         {
-#pragma warning disable CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
-            return null; // No unique solution or no solution at all
-#pragma warning restore CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
+#pragma warning disable CS8603 
+            return null; 
+#pragma warning restore CS8603 
         }
 
         double detX = GetDeterminant(c1, b1, c2, b2);
@@ -103,9 +103,9 @@ class ThreeEquationSystem : TSystemLinearEquation
 
         if (Math.Abs(det) < 1e-9)
         {
-#pragma warning disable CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
-            return null; // No unique solution or no solution at all
-#pragma warning restore CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
+#pragma warning disable CS8603 
+            return null; 
+#pragma warning restore CS8603
         }
 
         double detX = d1 * GetDeterminant(b2, c2, b3, c3) - b1 * GetDeterminant(d2, c2, d3, c3) + c1 * GetDeterminant(d2, b2, d3, b3);
