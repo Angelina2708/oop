@@ -99,16 +99,19 @@ namespace Lab4
                 var list = new List<HumanContainer<Human>>();
                 list.Add(container1);
                 list.Add(container2);
+
                 //orderBy
                 Console.WriteLine("\nLinq To objects: OrderBy, ThenBy");
                 var orderRes = container1.OrderBy(h => h.Height).ThenBy(h => h.Weight);
                 foreach (var human in orderRes)
                     Console.WriteLine(human);
+
                 //where
                 Console.WriteLine("\nLinq To objects: Where");
                 var whereRes = container1.Where(h => (h.Height > 170 && h.Weight >= 58) || h.FullName.StartsWith("L"));
                 foreach (var human in whereRes)
                     Console.WriteLine(human.ToString());
+                
                 //select
                 Console.WriteLine("\nLinq To objects: Select");
                 var selectRes = container1.Select((h, i) => new { Index = i + 1, h.FullName });
@@ -116,11 +119,13 @@ namespace Lab4
                 {
                     Console.WriteLine(el);
                 }
+                
                 //selectMany
                 Console.WriteLine("\nLinq To objects: SelectMany");
                 var selectManyRes = container1.SelectMany(h => h.FullName.Split(' '));
                 foreach (var el in selectManyRes)
                     Console.WriteLine(el);
+                
                 //Skip
                 Console.WriteLine("\nLinq To objects: Skip");
                 var skipRes = container1.Skip(2);
@@ -128,6 +133,7 @@ namespace Lab4
                 {
                     Console.WriteLine(human);
                 }
+                
                 //SkipWhile
                 Console.WriteLine("\nLinq To objects: SkipWhile");
                 var skipWhileRes = container1.SkipWhile(h => h.Height < 190);
@@ -135,6 +141,7 @@ namespace Lab4
                 {
                     Console.WriteLine(human);
                 }
+                
                 //Take
                 Console.WriteLine("\nLinq To objects: Take");
                 var takeRes = container1.Take(2);
@@ -142,6 +149,7 @@ namespace Lab4
                 {
                     Console.WriteLine(human);
                 }
+                
                 //TakeWhile
                 Console.WriteLine("\nLinq To objects: TakeWhile");
                 var takeWhileRes = container1.TakeWhile(h => h.Height < 190);
@@ -149,6 +157,7 @@ namespace Lab4
                 {
                     Console.WriteLine(human);
                 }
+                
                 //Concat
                 Console.WriteLine("\nLinq To objects: Concat");
                 var concatRes = container1.Concat(container2);
@@ -156,6 +165,7 @@ namespace Lab4
                 {
                     Console.WriteLine(human);
                 }
+                
                 //GroupBy
                 Console.WriteLine("\nLinq To objects: GroupBy");
                 var groupByRes = concatRes.Where(h => h is Student).GroupBy(h => ((Student)h).University);
@@ -164,15 +174,19 @@ namespace Lab4
                     Console.WriteLine($"Group: {group.Key}, Count: {group.Count()}");
                     foreach (var human in group) Console.WriteLine(human);
                 }
+                
+                
                 //First
                 Console.WriteLine("\nLinq To objects: First");
                 var firstRes = concatRes.First(h => h.FullName.Length > 12);
                 Console.WriteLine(firstRes);
+                
                 //FirstOrDefault
                 Console.WriteLine("\nLinq To objects: FirstOrDefault");
                 var firstOrDefRes = concatRes.FirstOrDefault(h => h.FullName.Length > 14);
                 if (firstOrDefRes != null)
                     Console.WriteLine();
+                
                 //DefaultIfEmpty
                 Console.WriteLine("\nLinq To objects: DefaultIfEmpty");
                 var defaultIfEmptyRes = container2.Where(c => c.FirstName == "Eleanor")
@@ -183,14 +197,17 @@ namespace Lab4
                 })
                 .First();
                 Console.WriteLine(defaultIfEmptyRes);
+                
                 //Min
                 Console.WriteLine("\nLinq To objects: Min");
                 var minRes = container1.Min(h => h.Weight);
                 Console.WriteLine(minRes);
+                
                 //Max
                 Console.WriteLine("\nLinq To objects: Max");
                 var maxRes = container1.Max(h => h.Height);
                 Console.WriteLine(maxRes);
+                
                 //Join
                 Console.WriteLine("\nLinq To objects: Join");
                 var joinRes = container1.Join(container2, o => o.Height, i => i.Height, (o, i) => new Human
@@ -202,6 +219,7 @@ namespace Lab4
                 });
                 foreach (var human in joinRes)
                     Console.WriteLine(human);
+                
                 //GroupJoin
                 Console.WriteLine("\nLinq To objects: GroupJoin");
                 var groupJoinRes = container2.GroupJoin(container2, o => o.Height, i => i.Height, (o, i) => new
@@ -214,6 +232,7 @@ namespace Lab4
                 {
                     Console.WriteLine($"{human.FullName}: Count = {human.Count}, TotalWeight: {human.TotalWeight}");
                 }
+                
                 //All and Any
                 Console.WriteLine("\nLinq To objects: All/Any");
                 var allAnyRes = list.First(c => c.All(h => h.Height > 160) && c.Any(h => h is Worker))
@@ -221,6 +240,7 @@ namespace Lab4
                 .OrderByDescending(s => s);
                 foreach (var name in allAnyRes)
                     Console.WriteLine(name);
+                
                 //Contains
                 Console.WriteLine("\nLinq To objects: Contains");
                 var containsRes = list.Where(c => c.Contains(wr3))

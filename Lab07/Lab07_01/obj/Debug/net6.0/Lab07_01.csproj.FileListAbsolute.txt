@@ -1,0 +1,15 @@
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\bin\Debug\net6.0\Lab07_01.exe
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\bin\Debug\net6.0\Lab07_01.deps.json
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\bin\Debug\net6.0\Lab07_01.runtimeconfig.json
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\bin\Debug\net6.0\Lab07_01.dll
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\bin\Debug\net6.0\Lab07_01.pdb
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\obj\Debug\net6.0\Lab07_01.csproj.AssemblyReference.cache
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\obj\Debug\net6.0\Lab07_01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\obj\Debug\net6.0\Lab07_01.AssemblyInfoInputs.cache
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\obj\Debug\net6.0\Lab07_01.AssemblyInfo.cs
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\obj\Debug\net6.0\Lab07_01.csproj.CoreCompileInputs.cache
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\obj\Debug\net6.0\Lab07_01.dll
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\obj\Debug\net6.0\refint\Lab07_01.dll
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\obj\Debug\net6.0\Lab07_01.pdb
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\obj\Debug\net6.0\Lab07_01.genruntimeconfig.cache
+C:\Users\Тонус Авто\Source\Repos\Angelina2708\oop\Lab07\Lab07_01\obj\Debug\net6.0\ref\Lab07_01.dll
