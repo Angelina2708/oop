@@ -103,7 +103,7 @@ public class ZnyatyZRahunkuException : Exception //Опис власного к�
 }
 
 //клас залишок на рахунку
-public class ZalyshokNaRahunkuException : Exception
+public class ZalyshokNaRahunkuException : Exception //Опис власного класу винятків ZalyshokNaRahunkuException
 {
     public ZalyshokNaRahunkuException(decimal balance)
         : base($"Неможливо створити рахунок - зазначено некоректне значення залишку на рахунку: {balance}.")
@@ -117,7 +117,7 @@ public class Program
     {
         try
         {
-            var account = new RegularAccount("12345678", 1234, 5000);
+            var account = new RegularAccount("12345678", 1234, -1000);
         }
         catch (ZalyshokNaRahunkuException)
         {
@@ -125,11 +125,11 @@ public class Program
         }
 
         var regularAccount = new RegularAccount("12345678", 1234, 1000);
-        regularAccount.Withdraw(700);
+        regularAccount.Withdraw(-500);
         regularAccount.Withdraw(2000);
 
         var privilegedAccount = new PrivilegedAccount("23456789", 5678, 2000);
-        privilegedAccount.Withdraw(600);
+        privilegedAccount.Withdraw(-500);
         privilegedAccount.Withdraw(3000);
     }
 }
