@@ -117,19 +117,19 @@ public class Program
     {
         try
         {
-            var account = new RegularAccount("12345678", 1234, -1000);
+            var account = new RegularAccount("12345678", 1234, 5000);
         }
         catch (ZalyshokNaRahunkuException)
         {
             // Обробка помилки.
         }
 
-        var regularAccount = new RegularAccount("12345678", 1234, 1000);
-        regularAccount.Withdraw(-500);
+        var regularAccount = new RegularAccount("12345678", 1234, 7000);
+        regularAccount.Withdraw(900);
         regularAccount.Withdraw(2000);
 
-        var privilegedAccount = new PrivilegedAccount("23456789", 5678, 2000);
-        privilegedAccount.Withdraw(-500);
-        privilegedAccount.Withdraw(3000);
+        var privilegedAccount = new PrivilegedAccount("23456789", 5678, 500);
+        privilegedAccount.Withdraw(230);
+        privilegedAccount.Withdraw(100);
     }
 }

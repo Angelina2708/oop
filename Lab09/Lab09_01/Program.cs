@@ -6,7 +6,7 @@ class RectangleIntegral
 {
     public static double Calculate(double a, double b, int n, Function f)
     {
-        double h = (b - a) / n;
+        double h = (b - a) / n; // h - крок
         double result = 0.0;
 
         for (int i = 0; i < n; i++)
