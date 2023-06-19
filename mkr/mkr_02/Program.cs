@@ -12,7 +12,7 @@ class Bush : ITree
 {
     public void DisplayType()
     {
-        Console.WriteLine("Це кущ.");
+        Console.WriteLine("Це кущ");
     }
 
     public void DisplayName()
@@ -27,7 +27,7 @@ class Tree : ITree
 {
     public void DisplayType()
     {
-        Console.WriteLine("Це дерево.");
+        Console.WriteLine("Це дерево");
     }
 
     public void DisplayName()
@@ -42,7 +42,7 @@ class Grass : ITree
 {
     public void DisplayType()
     {
-        Console.WriteLine("Це трава.");
+        Console.WriteLine("Це трава");
     }
 
     public void DisplayName()
